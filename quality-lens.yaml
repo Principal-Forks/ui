@@ -1,19 +1,19 @@
 # Quality Lens Configuration for shadcn/ui
 # This config is inherited by all workspace packages
-# Uses pnpm scripts which work with turbo monorepo setup
+# Uses pnpm exec to resolve tools in pnpm workspace and produce JSON output
 
 lenses:
-  # Linting - uses ESLint via turbo
-  eslint: pnpm run lint
+  # Linting - eslint with JSON format
+  eslint: pnpm exec eslint . --format json
 
-  # Type checking - uses tsc via turbo
-  typescript: pnpm run typecheck
+  # Type checking - tsc with listFiles for complete file list
+  typescript: pnpm exec tsc --noEmit --listFiles
 
-  # Formatting - uses Prettier via turbo
-  prettier: pnpm run format:check
+  # Formatting - prettier check
+  prettier: pnpm exec prettier --check "**/*.{ts,tsx,mdx}" --cache
 
-  # Testing - uses Vitest (only in packages that have tests)
-  vitest: pnpm run test
+  # Testing - vitest with JSON reporter
+  vitest: pnpm exec vitest run --reporter=json
 
 # Exclude test fixtures - they're not real packages
 exclude:
