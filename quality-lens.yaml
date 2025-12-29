@@ -12,7 +12,7 @@ lenses:
   # Formatting - prettier check
   prettier: pnpm exec prettier --check "**/*.{ts,tsx,mdx}" --cache
 
-  # Testing - vitest with JSON reporter
+  # Testing - vitest with JSON reporter (coverage requires @vitest/coverage-v8)
   vitest: pnpm exec vitest run --reporter=json
 
 # Exclude test fixtures - they're not real packages
