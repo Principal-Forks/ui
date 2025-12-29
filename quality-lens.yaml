@@ -15,8 +15,11 @@ lenses:
   # Testing - vitest with JSON reporter (coverage requires @vitest/coverage-v8)
   vitest: pnpm exec vitest run --reporter=json
 
-# Exclude test fixtures - they're not real packages
+# Exclude test fixtures, deprecated packages, and templates
 exclude:
   - "packages/tests/fixtures/**"
+  - "packages/shadcn/test/fixtures/**"
+  - "deprecated/**"
+  - "templates/**"
   - "**/node_modules/**"
   - "**/temp/**"
