@@ -10,7 +10,7 @@ lenses:
   typescript: pnpm exec tsc --noEmit --listFiles
 
   # Formatting - prettier check with debug for file list
-  prettier: pnpm exec prettier --check "**/*.{ts,tsx,mdx}" --cache --log-level debug
+  prettier: pnpm exec prettier --check "**/*.{ts,tsx,mdx}" --cache --loglevel debug
 
   # Testing - vitest with JSON reporter and coverage
   vitest: pnpm exec vitest run --reporter=json --coverage
