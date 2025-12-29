@@ -12,7 +12,8 @@ lenses:
   # Formatting - prettier check with debug for file list
   prettier: pnpm exec prettier --check "**/*.{ts,tsx,mdx}" --cache --log-level debug
 
-  # Testing - vitest with JSON reporter (coverage requires @vitest/coverage-v8)
+  # Testing - vitest with JSON reporter
+  # Add --coverage after installing @vitest/coverage-v8 for per-file coverage visualization
   vitest: pnpm exec vitest run --reporter=json
 
 # Exclude test fixtures, deprecated packages, and templates
