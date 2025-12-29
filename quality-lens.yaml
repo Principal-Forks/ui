@@ -1,14 +1,15 @@
 # Quality Lens Configuration for shadcn/ui
 # This config is inherited by all workspace packages
+# Uses pnpm scripts which work with turbo monorepo setup
 
 lenses:
-  # Linting - uses ESLint
+  # Linting - uses ESLint via turbo
   eslint: pnpm run lint
 
-  # Type checking
+  # Type checking - uses tsc via turbo
   typescript: pnpm run typecheck
 
-  # Formatting - uses Prettier
+  # Formatting - uses Prettier via turbo
   prettier: pnpm run format:check
 
   # Testing - uses Vitest (only in packages that have tests)
