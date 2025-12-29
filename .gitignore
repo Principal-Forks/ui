@@ -43,3 +43,4 @@ tsconfig.tsbuildinfo
 .notes
 .playwright-mcp
 shadcn-workspace
+results.json
