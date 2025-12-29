@@ -1,0 +1,21 @@
+# Quality Lens Configuration for shadcn/ui
+# This config is inherited by all workspace packages
+
+lenses:
+  # Linting - uses ESLint
+  eslint: pnpm run lint
+
+  # Type checking
+  typescript: pnpm run typecheck
+
+  # Formatting - uses Prettier
+  prettier: pnpm run format:check
+
+  # Testing - uses Vitest (only in packages that have tests)
+  vitest: pnpm run test
+
+# Exclude test fixtures - they're not real packages
+exclude:
+  - "packages/tests/fixtures/**"
+  - "**/node_modules/**"
+  - "**/temp/**"
