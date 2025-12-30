@@ -1,0 +1,58 @@
+version: "1.0.0"
+name: "shadcn/ui Architecture"
+
+nodeComponents:
+  app:
+    defaultLabel: "Application"
+    color: "#3b82f6"
+    description: "Next.js application or entry point"
+
+  package:
+    defaultLabel: "Package"
+    color: "#8b5cf6"
+    description: "Published npm package"
+
+  module:
+    defaultLabel: "Module"
+    color: "#06b6d4"
+    description: "Internal module or directory"
+
+  command:
+    defaultLabel: "CLI Command"
+    color: "#f59e0b"
+    description: "CLI command handler"
+
+  registry:
+    defaultLabel: "Registry"
+    color: "#10b981"
+    description: "Component registry system"
+
+  components:
+    defaultLabel: "Components"
+    color: "#ec4899"
+    description: "UI component collection"
+
+  util:
+    defaultLabel: "Utility"
+    color: "#6b7280"
+    description: "Utility module or helper"
+
+  external:
+    defaultLabel: "External"
+    color: "#ef4444"
+    description: "External service or dependency"
+
+edgeComponents:
+  uses:
+    label: "uses"
+    description: "Direct dependency or usage"
+
+  generates:
+    label: "generates"
+    style: "dashed"
+    description: "Code generation or build output"
+
+  fetches:
+    label: "fetches"
+    style: "dotted"
+    description: "Network request or data fetch"

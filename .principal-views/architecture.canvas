@@ -1,0 +1,721 @@
+{
+  "pv": {
+    "name": "shadcn/ui Architecture",
+    "version": "1.0.0"
+  },
+  "nodes": [
+    {
+      "id": "monorepo",
+      "type": "group",
+      "x": 0,
+      "y": 0,
+      "width": 1400,
+      "height": 900,
+      "label": "shadcn/ui Monorepo"
+    },
+    {
+      "id": "apps-group",
+      "type": "group",
+      "x": 50,
+      "y": 60,
+      "width": 600,
+      "height": 780,
+      "label": "apps/"
+    },
+    {
+      "id": "packages-group",
+      "type": "group",
+      "x": 700,
+      "y": 60,
+      "width": 650,
+      "height": 780,
+      "label": "packages/"
+    },
+    {
+      "id": "v4-app",
+      "type": "file",
+      "file": "apps/v4",
+      "x": 80,
+      "y": 100,
+      "width": 540,
+      "height": 700,
+      "pv": {
+        "nodeType": "app",
+        "name": "v4 (Documentation Site)",
+        "description": "Next.js 16 documentation site with App Router"
+      }
+    },
+    {
+      "id": "nextjs-app",
+      "type": "file",
+      "file": "apps/v4/app",
+      "x": 100,
+      "y": 150,
+      "width": 220,
+      "height": 120,
+      "pv": {
+        "nodeType": "module",
+        "name": "app/",
+        "description": "Next.js App Router - pages and routes"
+      }
+    },
+    {
+      "id": "docs-routes",
+      "type": "file",
+      "file": "apps/v4/app/(app)/docs",
+      "x": 110,
+      "y": 180,
+      "width": 90,
+      "height": 40,
+      "pv": {
+        "nodeType": "module",
+        "name": "(app)/docs",
+        "description": "Component documentation pages"
+      }
+    },
+    {
+      "id": "examples-routes",
+      "type": "file",
+      "file": "apps/v4/app/(examples)",
+      "x": 210,
+      "y": 180,
+      "width": 90,
+      "height": 40,
+      "pv": {
+        "nodeType": "module",
+        "name": "(examples)/",
+        "description": "Full page examples (dashboard, forms)"
+      }
+    },
+    {
+      "id": "v4-registry",
+      "type": "file",
+      "file": "apps/v4/registry",
+      "x": 100,
+      "y": 290,
+      "width": 220,
+      "height": 180,
+      "pv": {
+        "nodeType": "registry",
+        "name": "registry/",
+        "description": "Component registry with styles, blocks, charts"
+      }
+    },
+    {
+      "id": "registry-ui",
+      "type": "file",
+      "file": "apps/v4/registry/new-york-v4/ui",
+      "x": 110,
+      "y": 330,
+      "width": 90,
+      "height": 50,
+      "pv": {
+        "nodeType": "components",
+        "name": "new-york-v4/ui/",
+        "description": "Core UI components (button, card, dialog...)"
+      }
+    },
+    {
+      "id": "registry-blocks",
+      "type": "file",
+      "file": "apps/v4/registry/new-york-v4/blocks",
+      "x": 210,
+      "y": 330,
+      "width": 90,
+      "height": 50,
+      "pv": {
+        "nodeType": "components",
+        "name": "blocks/",
+        "description": "Composite component blocks (sidebar, login)"
+      }
+    },
+    {
+      "id": "registry-charts",
+      "type": "file",
+      "file": "apps/v4/registry/new-york-v4/charts",
+      "x": 110,
+      "y": 400,
+      "width": 90,
+      "height": 50,
+      "pv": {
+        "nodeType": "components",
+        "name": "charts/",
+        "description": "Chart components using Recharts"
+      }
+    },
+    {
+      "id": "registry-hooks",
+      "type": "file",
+      "file": "apps/v4/registry/new-york-v4/hooks",
+      "x": 210,
+      "y": 400,
+      "width": 90,
+      "height": 50,
+      "pv": {
+        "nodeType": "module",
+        "name": "hooks/",
+        "description": "Custom React hooks"
+      }
+    },
+    {
+      "id": "v4-components",
+      "type": "file",
+      "file": "apps/v4/components",
+      "x": 350,
+      "y": 150,
+      "width": 150,
+      "height": 80,
+      "pv": {
+        "nodeType": "components",
+        "name": "components/",
+        "description": "Site-specific React components"
+      }
+    },
+    {
+      "id": "v4-lib",
+      "type": "file",
+      "file": "apps/v4/lib",
+      "x": 350,
+      "y": 250,
+      "width": 150,
+      "height": 80,
+      "pv": {
+        "nodeType": "util",
+        "name": "lib/",
+        "description": "Utilities, config, and helpers"
+      }
+    },
+    {
+      "id": "v4-scripts",
+      "type": "file",
+      "file": "apps/v4/scripts",
+      "x": 350,
+      "y": 350,
+      "width": 150,
+      "height": 80,
+      "pv": {
+        "nodeType": "module",
+        "name": "scripts/",
+        "description": "Build scripts (registry builder, icons)"
+      }
+    },
+    {
+      "id": "v4-content",
+      "type": "file",
+      "file": "apps/v4/content",
+      "x": 350,
+      "y": 450,
+      "width": 150,
+      "height": 80,
+      "pv": {
+        "nodeType": "module",
+        "name": "content/",
+        "description": "MDX documentation content"
+      }
+    },
+    {
+      "id": "shadcn-pkg",
+      "type": "file",
+      "file": "packages/shadcn",
+      "x": 730,
+      "y": 100,
+      "width": 580,
+      "height": 700,
+      "pv": {
+        "nodeType": "package",
+        "name": "shadcn (CLI)",
+        "description": "Published npm CLI package for component management"
+      }
+    },
+    {
+      "id": "cli-commands",
+      "type": "file",
+      "file": "packages/shadcn/src/commands",
+      "x": 760,
+      "y": 150,
+      "width": 250,
+      "height": 280,
+      "pv": {
+        "nodeType": "module",
+        "name": "commands/",
+        "description": "CLI command handlers"
+      }
+    },
+    {
+      "id": "cmd-init",
+      "type": "file",
+      "file": "packages/shadcn/src/commands/init/index.ts",
+      "x": 780,
+      "y": 190,
+      "width": 100,
+      "height": 40,
+      "pv": {
+        "nodeType": "command",
+        "name": "init",
+        "description": "Initialize shadcn in a project"
+      }
+    },
+    {
+      "id": "cmd-add",
+      "type": "file",
+      "file": "packages/shadcn/src/commands/add.ts",
+      "x": 780,
+      "y": 240,
+      "width": 100,
+      "height": 40,
+      "pv": {
+        "nodeType": "command",
+        "name": "add",
+        "description": "Add components to project"
+      }
+    },
+    {
+      "id": "cmd-build",
+      "type": "file",
+      "file": "packages/shadcn/src/commands/build.ts",
+      "x": 780,
+      "y": 290,
+      "width": 100,
+      "height": 40,
+      "pv": {
+        "nodeType": "command",
+        "name": "build",
+        "description": "Build component registry"
+      }
+    },
+    {
+      "id": "cmd-search",
+      "type": "file",
+      "file": "packages/shadcn/src/commands/search.ts",
+      "x": 780,
+      "y": 340,
+      "width": 100,
+      "height": 40,
+      "pv": {
+        "nodeType": "command",
+        "name": "search",
+        "description": "Search available components"
+      }
+    },
+    {
+      "id": "cmd-diff",
+      "type": "file",
+      "file": "packages/shadcn/src/commands/diff.ts",
+      "x": 900,
+      "y": 190,
+      "width": 90,
+      "height": 40,
+      "pv": {
+        "nodeType": "command",
+        "name": "diff",
+        "description": "Show component differences"
+      }
+    },
+    {
+      "id": "cmd-view",
+      "type": "file",
+      "file": "packages/shadcn/src/commands/view.ts",
+      "x": 900,
+      "y": 240,
+      "width": 90,
+      "height": 40,
+      "pv": {
+        "nodeType": "command",
+        "name": "view",
+        "description": "View component source"
+      }
+    },
+    {
+      "id": "cmd-mcp",
+      "type": "file",
+      "file": "packages/shadcn/src/commands/mcp.ts",
+      "x": 900,
+      "y": 290,
+      "width": 90,
+      "height": 40,
+      "pv": {
+        "nodeType": "command",
+        "name": "mcp",
+        "description": "MCP server for AI tools"
+      }
+    },
+    {
+      "id": "cmd-migrate",
+      "type": "file",
+      "file": "packages/shadcn/src/commands/migrate.ts",
+      "x": 900,
+      "y": 340,
+      "width": 90,
+      "height": 40,
+      "pv": {
+        "nodeType": "command",
+        "name": "migrate",
+        "description": "Migrate components to new versions"
+      }
+    },
+    {
+      "id": "cli-registry",
+      "type": "file",
+      "file": "packages/shadcn/src/registry",
+      "x": 760,
+      "y": 450,
+      "width": 250,
+      "height": 140,
+      "pv": {
+        "nodeType": "registry",
+        "name": "registry/",
+        "description": "Registry schema, API, and fetching logic"
+      }
+    },
+    {
+      "id": "registry-schema",
+      "type": "file",
+      "file": "packages/shadcn/src/registry/schema.ts",
+      "x": 780,
+      "y": 490,
+      "width": 100,
+      "height": 40,
+      "pv": {
+        "nodeType": "util",
+        "name": "schema.ts",
+        "description": "Zod schemas for registry items"
+      }
+    },
+    {
+      "id": "registry-api",
+      "type": "file",
+      "file": "packages/shadcn/src/registry/api.ts",
+      "x": 890,
+      "y": 490,
+      "width": 100,
+      "height": 40,
+      "pv": {
+        "nodeType": "util",
+        "name": "api.ts",
+        "description": "Registry fetching and resolution"
+      }
+    },
+    {
+      "id": "cli-utils",
+      "type": "file",
+      "file": "packages/shadcn/src/utils",
+      "x": 760,
+      "y": 610,
+      "width": 250,
+      "height": 140,
+      "pv": {
+        "nodeType": "util",
+        "name": "utils/",
+        "description": "CLI utilities and helpers"
+      }
+    },
+    {
+      "id": "utils-config",
+      "type": "file",
+      "file": "packages/shadcn/src/utils/get-config.ts",
+      "x": 780,
+      "y": 650,
+      "width": 100,
+      "height": 40,
+      "pv": {
+        "nodeType": "util",
+        "name": "get-config.ts",
+        "description": "Configuration management"
+      }
+    },
+    {
+      "id": "utils-add",
+      "type": "file",
+      "file": "packages/shadcn/src/utils/add-components.ts",
+      "x": 890,
+      "y": 650,
+      "width": 100,
+      "height": 40,
+      "pv": {
+        "nodeType": "util",
+        "name": "add-components.ts",
+        "description": "Component file generation"
+      }
+    },
+    {
+      "id": "cli-mcp",
+      "type": "file",
+      "file": "packages/shadcn/src/mcp",
+      "x": 1040,
+      "y": 150,
+      "width": 150,
+      "height": 100,
+      "pv": {
+        "nodeType": "module",
+        "name": "mcp/",
+        "description": "MCP server implementation"
+      }
+    },
+    {
+      "id": "cli-preflights",
+      "type": "file",
+      "file": "packages/shadcn/src/preflights",
+      "x": 1040,
+      "y": 270,
+      "width": 150,
+      "height": 80,
+      "pv": {
+        "nodeType": "module",
+        "name": "preflights/",
+        "description": "Pre-flight checks before operations"
+      }
+    },
+    {
+      "id": "cli-migrations",
+      "type": "file",
+      "file": "packages/shadcn/src/migrations",
+      "x": 1040,
+      "y": 370,
+      "width": 150,
+      "height": 80,
+      "pv": {
+        "nodeType": "module",
+        "name": "migrations/",
+        "description": "Component migration handlers"
+      }
+    },
+    {
+      "id": "cli-styles",
+      "type": "file",
+      "file": "packages/shadcn/src/styles",
+      "x": 1040,
+      "y": 470,
+      "width": 150,
+      "height": 80,
+      "pv": {
+        "nodeType": "module",
+        "name": "styles/",
+        "description": "Tailwind CSS integration"
+      }
+    },
+    {
+      "id": "external-registry",
+      "type": "text",
+      "text": "**ui.shadcn.com/r**\n\nRemote component registry",
+      "x": 1500,
+      "y": 300,
+      "width": 180,
+      "height": 80,
+      "pv": {
+        "nodeType": "external",
+        "name": "ui.shadcn.com/r",
+        "description": "Remote component registry"
+      }
+    },
+    {
+      "id": "user-project",
+      "type": "text",
+      "text": "**User Project**\n\nTarget project for component installation",
+      "x": 1500,
+      "y": 500,
+      "width": 180,
+      "height": 80,
+      "pv": {
+        "nodeType": "external",
+        "name": "User Project",
+        "description": "Target project for component installation"
+      }
+    },
+    {
+      "id": "radix-ui",
+      "type": "text",
+      "text": "**Radix UI**\n\nHeadless UI primitives",
+      "x": 1500,
+      "y": 100,
+      "width": 180,
+      "height": 80,
+      "pv": {
+        "nodeType": "external",
+        "name": "Radix UI",
+        "description": "Headless UI primitives"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "nextjs-app",
+      "toNode": "v4-registry",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "imports components",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e2",
+      "fromNode": "nextjs-app",
+      "toNode": "v4-components",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "renders",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e3",
+      "fromNode": "v4-scripts",
+      "toNode": "v4-registry",
+      "fromSide": "left",
+      "toSide": "right",
+      "label": "builds registry",
+      "pv": { "edgeType": "generates" }
+    },
+    {
+      "id": "e4",
+      "fromNode": "v4-components",
+      "toNode": "v4-lib",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "utilities",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e5",
+      "fromNode": "cmd-add",
+      "toNode": "cli-registry",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "fetches components",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e6",
+      "fromNode": "cmd-init",
+      "toNode": "cli-utils",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "config setup",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e7",
+      "fromNode": "cmd-add",
+      "toNode": "cli-utils",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "file generation",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e8",
+      "fromNode": "cli-registry",
+      "toNode": "external-registry",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "HTTP requests",
+      "pv": { "edgeType": "fetches" }
+    },
+    {
+      "id": "e9",
+      "fromNode": "cmd-add",
+      "toNode": "user-project",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "writes components",
+      "pv": { "edgeType": "generates" }
+    },
+    {
+      "id": "e10",
+      "fromNode": "cmd-init",
+      "toNode": "user-project",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "creates config",
+      "pv": { "edgeType": "generates" }
+    },
+    {
+      "id": "e11",
+      "fromNode": "cmd-search",
+      "toNode": "cli-registry",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "queries",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e12",
+      "fromNode": "cmd-build",
+      "toNode": "cli-registry",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "validates",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e13",
+      "fromNode": "cmd-mcp",
+      "toNode": "cli-mcp",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "starts server",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e14",
+      "fromNode": "registry-ui",
+      "toNode": "radix-ui",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "wraps primitives",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e15",
+      "fromNode": "cmd-diff",
+      "toNode": "cli-registry",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "compares",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e16",
+      "fromNode": "cmd-migrate",
+      "toNode": "cli-migrations",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "runs migrations",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e17",
+      "fromNode": "cmd-init",
+      "toNode": "cli-preflights",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "checks",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e18",
+      "fromNode": "cli-utils",
+      "toNode": "cli-styles",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "Tailwind config",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e19",
+      "fromNode": "nextjs-app",
+      "toNode": "v4-content",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "MDX docs",
+      "pv": { "edgeType": "uses" }
+    },
+    {
+      "id": "e20",
+      "fromNode": "v4-app",
+      "toNode": "external-registry",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "serves components",
+      "pv": { "edgeType": "fetches" }
+    }
+  ]
+}
