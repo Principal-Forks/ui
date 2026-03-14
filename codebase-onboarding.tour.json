@@ -1,0 +1,185 @@
+{
+  "id": "shadcn-ui-onboarding",
+  "title": "shadcn/ui Codebase Tour",
+  "description": "A guided walkthrough of the shadcn/ui monorepo — the component registry, CLI, docs site, and framework templates.",
+  "version": "1.0.0",
+  "audience": "New Contributors",
+  "prerequisites": [
+    "Familiarity with React and TypeScript",
+    "Basic understanding of monorepos and Turborepo"
+  ],
+  "steps": [
+    {
+      "id": "overview",
+      "title": "Monorepo Overview",
+      "description": "shadcn/ui is a monorepo managed with pnpm workspaces and Turborepo. The three main areas are: apps/ (the documentation site), packages/ (the shadcn CLI), and templates/ (starter projects for every supported framework).",
+      "estimatedTime": 60,
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "docs-site",
+      "title": "Documentation Site (apps/v4)",
+      "description": "The Next.js documentation site lives in apps/v4. It contains the component examples, the registry that powers 'npx shadcn add', and all the MDX content for the docs pages.",
+      "estimatedTime": 90,
+      "focusDirectory": "apps/v4",
+      "highlightLayers": [
+        {
+          "id": "docs-key-dirs",
+          "name": "Key Areas",
+          "color": "#3b82f6",
+          "items": [
+            { "path": "apps/v4/app", "type": "directory" },
+            { "path": "apps/v4/content", "type": "directory" },
+            { "path": "apps/v4/registry", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "component-registry",
+      "title": "Component Registry",
+      "description": "The registry in apps/v4/registry/ defines every component, block, hook, and style that users can install. The new-york-v4/ directory contains the actual component source code that gets copied into user projects.",
+      "estimatedTime": 90,
+      "focusDirectory": "apps/v4/registry",
+      "highlightLayers": [
+        {
+          "id": "registry-core",
+          "name": "Component Source",
+          "color": "#10b981",
+          "items": [
+            { "path": "apps/v4/registry/new-york-v4", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        },
+        {
+          "id": "registry-config",
+          "name": "Registry Config",
+          "color": "#f59e0b",
+          "items": [
+            { "path": "apps/v4/registry/config.ts", "type": "file" },
+            { "path": "apps/v4/registry/styles.tsx", "type": "file" },
+            { "path": "apps/v4/registry/themes.ts", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "shadcn-cli",
+      "title": "The shadcn CLI",
+      "description": "The CLI package (packages/shadcn) powers 'npx shadcn init' and 'npx shadcn add'. It handles project detection, component installation, style application, and schema migrations. The commands/ directory maps to each CLI subcommand.",
+      "estimatedTime": 120,
+      "focusDirectory": "packages/shadcn/src",
+      "highlightLayers": [
+        {
+          "id": "cli-commands",
+          "name": "CLI Commands",
+          "color": "#8b5cf6",
+          "items": [
+            { "path": "packages/shadcn/src/commands", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        },
+        {
+          "id": "cli-internals",
+          "name": "CLI Internals",
+          "color": "#ec4899",
+          "items": [
+            { "path": "packages/shadcn/src/registry", "type": "directory" },
+            { "path": "packages/shadcn/src/preflights", "type": "directory" },
+            { "path": "packages/shadcn/src/utils", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "framework-templates",
+      "title": "Framework Templates",
+      "description": "The templates/ directory contains starter projects for every supported framework: Next.js, Vite, React Router, Astro, and TanStack Start — each with both standalone and monorepo variants. These are used by 'npx shadcn init' to scaffold new projects.",
+      "estimatedTime": 60,
+      "focusDirectory": "templates",
+      "highlightLayers": [
+        {
+          "id": "templates-layer",
+          "name": "Framework Templates",
+          "color": "#f97316",
+          "items": [
+            { "path": "templates/next-app", "type": "directory" },
+            { "path": "templates/vite-app", "type": "directory" },
+            { "path": "templates/react-router-app", "type": "directory" },
+            { "path": "templates/astro-app", "type": "directory" },
+            { "path": "templates/start-app", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "testing-and-ci",
+      "title": "Testing & CI",
+      "description": "Tests live in packages/tests/ (integration tests for the CLI) and packages/shadcn/test/ (unit tests). The project uses Vitest with workspace support. CI workflows in .github/workflows/ handle linting, testing, and releases.",
+      "estimatedTime": 60,
+      "focusDirectory": "packages",
+      "highlightLayers": [
+        {
+          "id": "test-dirs",
+          "name": "Test Suites",
+          "color": "#ef4444",
+          "items": [
+            { "path": "packages/tests", "type": "directory" },
+            { "path": "packages/shadcn/test", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "config-and-tooling",
+      "title": "Configuration & Tooling",
+      "description": "The monorepo is wired together with pnpm-workspace.yaml, turbo.json (build orchestration), and shared configs at the root. The scripts/ directory handles cross-package tasks like syncing templates.",
+      "estimatedTime": 60,
+      "focusDirectory": "",
+      "highlightLayers": [
+        {
+          "id": "config-files",
+          "name": "Root Config",
+          "color": "#6366f1",
+          "items": [
+            { "path": "pnpm-workspace.yaml", "type": "file" },
+            { "path": "turbo.json", "type": "file" },
+            { "path": "tsconfig.json", "type": "file" },
+            { "path": "vitest.workspace.ts", "type": "file" },
+            { "path": "package.json", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        }
+      ],
+      "colorMode": "fileTypes"
+    }
+  ],
+  "metadata": {
+    "author": "Principal Forks",
+    "createdAt": "2026-03-14T00:00:00.000Z",
+    "tags": [
+      "onboarding",
+      "shadcn-ui",
+      "monorepo",
+      "component-library"
+    ]
+  }
+}
