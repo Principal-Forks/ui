@@ -170,6 +170,14 @@
         }
       ],
       "colorMode": "fileTypes"
+    },
+    {
+      "id": "summary",
+      "title": "Next Steps",
+      "description": "You've seen the full picture: the docs site, the component registry, the CLI, framework templates, tests, and configuration. To get started contributing, check out CONTRIBUTING.md for guidelines, pick an open issue, and run 'pnpm install' followed by 'pnpm dev' in apps/v4 to spin up the docs site locally. Happy building!",
+      "estimatedTime": 30,
+      "focusDirectory": "",
+      "colorMode": "fileTypes"
     }
   ],
   "metadata": {
